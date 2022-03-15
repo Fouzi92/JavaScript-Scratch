@@ -55,5 +55,39 @@ questionContainer.addEventListener("mouseenter", () => {
 });
 
 questionContainer.addEventListener("mouseout", () => {
-  console.log("mouseout !");
+  questionContainer.style.background = "pink";
+});
+
+response.addEventListener("mouseover", () => {
+  response.classList.toggle("rotate");
+});
+
+//------------------------------------------------------
+
+const KeypressContainer = document.querySelector(".keypress");
+const key = document.getElementById("key");
+
+const ring = () => {
+  const audio = new Audio();
+  audio.src = "./Enter.mp3";
+  audio.play();
+};
+
+// "Keypress permet de crée un événement lorque vous appuyer sur une touche "Clavier"
+document.addEventListener("keypress", (e) => {
+  key.textContent = e.key;
+
+  if (e.key === "j") {
+    KeypressContainer.style.background = "yellow";
+    KeypressContainer.style.color = "red";
+    ring();
+  } else if (e.key === "h") {
+    KeypressContainer.style.background = "#54094E";
+    KeypressContainer.style.color = "#543309";
+    ring();
+  } else {
+    KeypressContainer.style.background = "black";
+  }
+
+  //ring();
 });

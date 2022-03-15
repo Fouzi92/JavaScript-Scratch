@@ -63,3 +63,8 @@ p {
 .cadre {
   background-color: rgba(138, 136, 17, 0.651);
 }
+
+.rotate {
+  transform: rotate(180deg);
+  transition: 3s ease-in-out;
+}
