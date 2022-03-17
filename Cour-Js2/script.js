@@ -126,10 +126,29 @@ select.addEventListener("input", (e) => {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  console.log(cgv.checked);
   if (cgv.checked) {
+    document.querySelector("form > div").innerHTML = `
+    <h3>Pseudo : ${pseudo}</h3>
+    <h4>Langage préféré : ${language}</h4>
+    `;
     // Affiche le contenue des variables
   } else {
     alert("Veuillez accepter les CGV");
   }
+});
+
+//--------------------------------------------------------------
+//Load event
+window.addEventListener("load", () => {
+  console.log("document");
+});
+//--------------------------------------------------------------
+// ForEach
+const boxes = document.querySelectorAll(".box");
+console.log(boxes);
+
+boxes.forEach((box) => {
+  box.addEventListener("click", (e) => {
+    e.target.style.transform = "scale(0.8)";
+  });
 });
