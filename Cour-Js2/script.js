@@ -152,3 +152,58 @@ boxes.forEach((box) => {
     e.target.style.transform = "scale(0.8)";
   });
 });
+
+//-------------------------------------------------------------------
+// addEventListener vs onclick
+
+//document.body.onclick = function () {
+// console.log("mpx");
+//};
+
+//document.body.onclick = () => {
+//  console.log("looool");
+//};
+
+//document.body.onscroll = function () {
+// console.log("pdLapub");
+//}//;
+
+// Bubbling => fin (de base l'eventlistener est parametre en mode Bublbing)
+document.body.addEventListener(
+  "click",
+  () => {
+    console.log("Psg_1");
+  },
+  false
+);
+
+// Usecapture
+document.body.addEventListener(
+  "click",
+  () => {
+    console.log("Psg_7");
+  },
+  true
+);
+
+//--------------------------------------------------------------------------------
+// Stop Propagation
+
+questionContainer.addEventListener("click", () => {
+  alert("Cara");
+  e.stopPropagation();
+});
+
+// removeEventListerner
+//------------------------------------------------------
+// BOM
+
+//console.log(window.innerHeight);
+//console.log(window.scrollY);
+
+//window.open("http://psg.fr", "cours js", "height=600, width=800");
+// window.close()
+
+btn3.addEventListener("click", () => {
+  confirm(" T'es sur ? tu va finir comme la Belgique ce pays sans palmarès");
+});
