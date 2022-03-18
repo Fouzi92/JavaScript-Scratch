@@ -85,5 +85,5 @@ ul {
 }
 
 .reduc {
-  transform: "";
+  transform: scale(0, 8);
 }
