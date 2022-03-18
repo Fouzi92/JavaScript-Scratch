@@ -190,7 +190,7 @@ document.body.addEventListener(
 // Stop Propagation
 
 questionContainer.addEventListener("click", () => {
-  alert("Cara");
+  //alert("Cara");
   e.stopPropagation();
 });
 
@@ -207,3 +207,34 @@ questionContainer.addEventListener("click", () => {
 btn3.addEventListener("click", () => {
   confirm(" T'es sur ? tu va finir comme la Belgique ce pays sans palmarès");
 });
+
+// prompt
+btn2.addEventListener("click", () => {
+  let answer = prompt("Bravo Génie Ton Nom ?");
+  questionContainer.innerHTML +=
+    "<h3>Bravo " + answer + " tu connais ton nom ! </h3>";
+});
+
+// Timer, compte à rebours
+setTimeout(() => {
+  questionContainer.style.borderRadius = "800px";
+}, 4000);
+
+let interval = setInterval(() => {
+  document.body.innerHTML += "<div class='box'><h2> New box!</h2></div> ";
+}, 4000);
+
+document.body.addEventListener("click", () => {
+  clearInterval(interval);
+});
+
+// Location
+//console.log(location.href);
+//console.log(location.host);
+//console.log(location.pathname);
+//console.log(location.search);
+//location.replace("http://psg.fr");
+
+//window.onload = () => {
+// location.href = "http://twitter.fr";
+//};
