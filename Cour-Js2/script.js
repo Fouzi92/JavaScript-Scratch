@@ -216,17 +216,17 @@ btn2.addEventListener("click", () => {
 });
 
 // Timer, compte à rebours
-setTimeout(() => {
-  questionContainer.style.borderRadius = "800px";
-}, 4000);
+//setTimeout(() => {
+//  questionContainer.style.borderRadius = "800px";
+//}, 4000);
 
-let interval = setInterval(() => {
-  document.body.innerHTML += "<div class='box'><h2> New box!</h2></div> ";
-}, 4000);
+//let interval = setInterval(() => {
+//  document.body.innerHTML += "<div class='box'><h2> New box!</h2></div> ";
+//}, 4000);
 
-document.body.addEventListener("click", () => {
-  clearInterval(interval);
-});
+//document.body.addEventListener("click", () => {
+// clearInterval(interval);
+//);
 
 // Location
 //console.log(location.href);
@@ -238,3 +238,10 @@ document.body.addEventListener("click", () => {
 //window.onload = () => {
 // location.href = "http://twitter.fr";
 //};
+
+//-------------------------------------------------
+//setProperty
+window.addEventListener("mousemove", (e) => {
+  nav.style.setProperty("--x", e.layerX + "px");
+  nav.style.setProperty("--y", e.layerY + "px");
+});
