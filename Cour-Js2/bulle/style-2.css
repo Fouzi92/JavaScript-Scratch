@@ -4,8 +4,8 @@
 body {
   overflow: hidden;
   min-height: 100vh;
-  background-color: pink;
-  cursor: crosshair;
+  background-color: rgb(22, 108, 165);
+  cursor: move;
   font-family: "VT323", monospace;
 }
 

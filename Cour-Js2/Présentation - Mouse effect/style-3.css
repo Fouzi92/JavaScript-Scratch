@@ -1,0 +1,32 @@
+.mousemove {
+  height: 50px;
+  width: 50px;
+  border: 2px solid rgba(69, 69, 177, 0.562);
+  position: absolute;
+  border-radius: 50px;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease;
+  z-index: -1;
+}
+
+.mousemove2 {
+  height: 100px;
+  width: 100px;
+  border: 2px solid rgba(18, 193, 216, 0.562);
+  position: absolute;
+  border-radius: 50px;
+  transform: translate(-50%, -50%);
+  transition: 1s ease;
+  z-index: 0;
+}
+
+.mousemove3 {
+  height: 200px;
+  width: 200px;
+  border: 2px solid rgba(26, 224, 8, 0.562);
+  position: absolute;
+  border-radius: 100px;
+  transform: translate(-50%, -50%);
+  transition: 2s ease;
+  z-index: 1;
+}
